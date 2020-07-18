@@ -1,0 +1,42 @@
+<!--
+ * @Author: chenhua
+ * @Date: 2020-07-17 15:16:48
+ * @LastEditors: chenhua
+ * @LastEditTime: 2020-07-17 15:34:19
+ * @Description: 
+ * @FilePath: \supermall\src\components\common\navbar\NavBar.vue
+--> 
+<template>
+  <div class="nav-bar">
+    <div class="left"><slot name="left"></slot></div>
+    <div class="center"><slot name="center"></slot></div>
+    <div class="right"><slot name="right"></slot></div>
+  </div>
+</template>
+
+<script type="text/javascript">
+export default {
+  name: 'NavBar',
+  data() {
+    return {
+
+    }
+  },
+}
+</script>
+
+<style scoped>
+  .nav-bar{
+    display: flex;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(100, 100, 100, 0.1);
+  }
+  .left,.right{
+    width: 60px;
+  }
+  .center{
+    flex: 1;
+  }
+</style>
